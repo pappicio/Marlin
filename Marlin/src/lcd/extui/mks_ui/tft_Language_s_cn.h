@@ -324,7 +324,7 @@
 #define FILESYS_TEXT_CN           "文件系统"
 #define WIFI_TEXT_CN              "WIFI"
 #define FAN_TEXT_CN               "风扇"
-#define ABOUT_TEXT_CN             "关于"
+#define ABOUT_TEXT_CN             "关于 > "
 #define BREAK_POINT_TEXT_CN       "断点续打"
 #define FILAMENT_TEXT_CN          "换料"
 #define LANGUAGE_TEXT_CN          "语言"

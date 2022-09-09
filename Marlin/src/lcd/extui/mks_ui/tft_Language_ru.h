@@ -93,7 +93,7 @@
 #define FILESYS_TEXT_RU                 "система"
 #define WIFI_TEXT_RU                    "WiFi"
 #define FAN_TEXT_RU                     "вентилятор"
-#define ABOUT_TEXT_RU                   "инфо"
+#define ABOUT_TEXT_RU                   "инфо > "
 #define BREAK_POINT_TEXT_RU             "продолжить"
 #define FILAMENT_TEXT_RU                "замена"
 #define LANGUAGE_TEXT_RU                "язык"

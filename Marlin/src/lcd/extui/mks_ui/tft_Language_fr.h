@@ -93,7 +93,7 @@
 #define FILESYS_TEXT_FR               "Fichier"
 #define WIFI_TEXT_FR                  "WiFi"
 #define FAN_TEXT_FR                   "Fan"
-#define ABOUT_TEXT_FR                 "À propos"
+#define ABOUT_TEXT_FR                 "À propos > "
 #define BREAK_POINT_TEXT_FR           "Continuer"
 #define FILAMENT_TEXT_FR              "Remplacer"
 #define LANGUAGE_TEXT_FR              "Langue"

@@ -343,7 +343,7 @@
 #define FILESYS_TEXT_EN               "FileSys"
 #define WIFI_TEXT_EN                  "WiFi"
 #define FAN_TEXT_EN                   "Fan"
-#define ABOUT_TEXT_EN                 "About"
+#define ABOUT_TEXT_EN                 "About > "
 #define BREAK_POINT_TEXT_EN           "Continue"
 #define FILAMENT_TEXT_EN              "Filament"
 #define LANGUAGE_TEXT_EN              "Language"

@@ -93,7 +93,7 @@
 #define FILESYS_TEXT_SP         "Puerto"
 #define WIFI_TEXT_SP            "WiFi"
 #define FAN_TEXT_SP             "Ventilador"
-#define ABOUT_TEXT_SP           "Acerca"
+#define ABOUT_TEXT_SP           "Acerca > "
 #define BREAK_POINT_TEXT_SP     "Continuar"
 #define FILAMENT_TEXT_SP        "Filamento"
 #define LANGUAGE_TEXT_SP        "Language"
