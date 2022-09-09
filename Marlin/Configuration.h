@@ -26,7 +26,7 @@
  */
 #pragma once
 
-#define CONFIGURATION_H_VERSION 02010100
+#define CONFIGURATION_H_VERSION 02010200
 
 //#define CONFIG_EXAMPLES_DIR "Two Trees/Sapphire Plus/Sapphire Plus V2"
 
@@ -167,8 +167,8 @@
 // Choose the name from boards.h that matches your setup
 
 #ifndef MOTHERBOARD
-  //#define MOTHERBOARD BOARD_MKS_ROBIN_NANO   // BOARD_MKS_ROBIN_NANO_V1.2
-  #define MOTHERBOARD BOARD_MKS_ROBIN_NANO_V1_3_F4
+  #define MOTHERBOARD BOARD_MKS_ROBIN_NANO   // BOARD_MKS_ROBIN_NANO_V1.2
+  //#define MOTHERBOARD BOARD_MKS_ROBIN_NANO_V1_3_F4
   //#define MOTHERBOARD BOARD_MKS_ROBIN_NANO_V2        // for last 2022 versions
 #endif
 //===========================================================================
@@ -179,7 +179,7 @@
 	//#define SAPPHIRE_PLUS_POWERLOSSRECOVERY   // on PIN PA2
 
 // LED Strips RGB addressable
-	#define SAPPHIRE_PLUS_NEOPIXEL    // on PIN PC7 ALERT: NO UART_DIRECT
+	//#define SAPPHIRE_PLUS_NEOPIXEL    // on PIN PC7 ALERT: NO UART_DIRECT
 
 
 /**
