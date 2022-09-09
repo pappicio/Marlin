@@ -35,6 +35,11 @@
 //===========================================================================
 
 //#define SAPPHIRE_PLUS_MKS_UI   // classic UI of TwoTrees - ATTENTION: copy assets folder into root sdcard
+#define SAPPHIRE_PLUS
+
+#if DISABLED (SAPPHIRE_PLUS)
+  #define SAPPHIRE_PRO  //enable to build for SAPPHIRE PRO INSTEAD OF PLUS
+#endif
 
 #if DISABLED(SAPPHIRE_PLUS_MKS_UI)
   #define COLOR_BACKGROUND 0x0009 //LCD background color
