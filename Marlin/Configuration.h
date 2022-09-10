@@ -35,8 +35,8 @@
 //===========================================================================
 
 //#define SAPPHIRE_PLUS_MKS_UI   // classic UI of TwoTrees - ATTENTION: copy assets folder into root sdcard
-#define SAPPHIRE_PLUS
 
+#define SAPPHIRE_PLUS
 #if DISABLED (SAPPHIRE_PLUS)
   #define SAPPHIRE_PRO  //enable to build for SAPPHIRE PRO INSTEAD OF PLUS
 #endif
@@ -45,7 +45,7 @@
   #define COLOR_BACKGROUND 0x0009 //LCD background color
 #endif
 
-//#define ROTATED_SCREEN //to rotate screen of 180 degrees if all shown upset! on TFT
+#define ROTATED_SCREEN //to rotate screen of 180 degrees if all shown upset! on TFT
 
 #define SAPPHIRE_PLUS_BLTOUCH           // Level sensor on Z endstop
      
