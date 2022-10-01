@@ -47,20 +47,20 @@
 
 #define ROTATED_SCREEN //to rotate screen of 180 degrees if all shown upset! on TFT
 
-#define SAPPHIRE_PLUS_BLTOUCH           // Level sensor on Z endstop
-     
-// If BLTouch without endstops z, connect BLTouch to ZMIM PA11 pin (Z-)
-// If BLtouch with 1 or 2 endstop z, connect BLTouch on PE6 pin (MT_DET2) for Robin Nano v1.2
-#define BLTOUCH_GENUINE  // Comment if you use a clone 3DTouch v3.2 with inverted logic for endstop
 
 #define GRIDMAX_POINTS 5  // Points for Bed leveling mesh: 3,4,5.... grid points to test the mesh with bltouch: grid 5 = 5x5, so 25 probe points
-
+     
 //#define SEPARATED_Z_MOTORS // to enable probe without Endstops and without BLTouch for non belt-synced Z motors
 
+#define SAPPHIRE_PLUS_BLTOUCH           // Level sensor on Z endstop
 #if ENABLED(SAPPHIRE_PLUS_BLTOUCH)
   #define probe_x   0.0   //probe point of X respect to bltouch mount
   #define probe_y -39.5   //probe point of Y respect to bltouch mount: negative for BLTOUCH on the MK8 fan side (visible from front)
   #define probe_z   2.0   //probe point of Z respect to bltouch mount, usually 0
+  // If BLTouch without endstops z, connect BLTouch to ZMIM PA11 pin (Z-)
+  // If BLtouch with 1 or 2 endstop z, connect BLTouch on PE6 pin (MT_DET2) for Robin Nano v1.2
+  #define BLTOUCH_GENUINE  // Comment if you use a clone 3DTouch v3.2 with inverted logic for endstop
+
 #endif
 
 // ========================= AUTO FAN on HEATER 1 =========================
@@ -79,7 +79,7 @@
 //== ENDSTOPS == STEPPER DRIVERS == UART == WIFI == LINEAR_ADVANCE == FILAMENT SENSOR ==
 //======================================================================================
 
-#define z_endstop_qty 1  //how many endstop switch on Z
+#define z_endstop_qty 0  //how many endstop switch on Z
      #if ENABLED(SAPPHIRE_PLUS_BLTOUCH)
       #if z_endstop_qty > 0
           #define BLTOUCH_WITH_ENDSTOPS           
@@ -91,7 +91,7 @@
 #define set_auto_conf  // to use SapphirePlusVariant instead "MANUAL CONFIGURATION"
 
 #ifdef set_auto_conf
- #define SapphirePlusVariant 4 // Read below
+ #define SapphirePlusVariant 8 // Read below
 
 /** CHOOSE YOUR SAPPHIRE PLUS VARIANT
  * 1: 	X tmc2208, Y tmc2208, E a4988, 	 single Z a4988
@@ -104,12 +104,14 @@
  * 5: 	X tmc2208, Y tmc2208, E tmc2208, dual 	Z tmc2208
  * 6: 	X tmc2208, Y tmc2208, E tmc2208, dual 	Z a4988
  * 7: 	X tmc2209, Y tmc2209, E tmc2209, dual 	Z tmc2225
- * 8: 	X tmc2209, Y tmc2209, E tmc2209, dual 	Z tmc2209
+ * 8: 	X tmc2209, Y tmc2209, E tmc2209, single 	Z tmc2209
  */
 
 // ======================= UART MODE ====================
 // Don't use suffix "_STANDALONE" for TMC2XXX in the configuration above
 // instradamento, define this
+
+
 //#define SAPPHIRE_PLUS_TMC_UART          
     // Enable UART for addresses TMC2209/2226: 1 wire for 4x steppers on PIN PA9 (X,Y,Z,Z2), 1 wire for 1x stepper on PA10 (E0)
 
@@ -155,7 +157,7 @@
 
 // =================== LINEAR ADVANCE ===================
 
-#define LINEAR_ADVANCE  // Disable Stealthchop for TMC2208 Extruder in GCODE with "M569 S0 E"
+//#define LINEAR_ADVANCE  // Disable Stealthchop for TMC2208 Extruder in GCODE with "M569 S0 E"
 	#if ENABLED (LINEAR_ADVANCE)
 	#define K_VALUE 0.10
 	#endif
@@ -172,8 +174,8 @@
 // Choose the name from boards.h that matches your setup
 
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_MKS_ROBIN_NANO   // BOARD_MKS_ROBIN_NANO_V1.2
-  //#define MOTHERBOARD BOARD_MKS_ROBIN_NANO_V1_3_F4
+  //#define MOTHERBOARD BOARD_MKS_ROBIN_NANO   // BOARD_MKS_ROBIN_NANO_V1.2
+  #define MOTHERBOARD BOARD_MKS_ROBIN_NANO_V1_3_F4
   //#define MOTHERBOARD BOARD_MKS_ROBIN_NANO_V2        // for last 2022 versions
 #endif
 //===========================================================================
@@ -226,10 +228,16 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "Marlin 2.1.1" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "Marlin 2.1.1-R" // Who made the changes.
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "Sapphire Plus"
+
+#if ENABLED (SAPPHIRE_PLUS)
+  #define CUSTOM_MACHINE_NAME "Sapphire Plus"
+#else
+  #define CUSTOM_MACHINE_NAME "Sapphire Pro"
+#endif
+ 
 
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
@@ -1318,7 +1326,7 @@
 #define USE_XMIN_PLUG   //  
 //#define USE_YMIN_PLUG
 
-#if z_endstop_qty > 0
+#if z_endstop_qty > -1
     #define USE_ZMIN_PLUG    // Z1 endstop (Left side) on PA11
 #elif ENABLED(SAPPHIRE_PLUS_BLTOUCH)
     #define USE_ZMIN_PLUG     // BLTouch as endstop, without phisical endtops Z
