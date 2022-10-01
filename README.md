@@ -19,11 +19,11 @@ with Bltouch and 5x2209 TMC in UART MODE
 
 <>
 
-to compile sources by yourself, download sources and unzip
+to compile sources by yourself, download sources and unzip on your pc desktop
 
-download visual studio code, install and execute
+download visual studio code (https://code.visualstudio.com/), install and execute
 
-open folder from this marlin, (just unzipped), where you can see "marlin" folder into folder opened
+open folder from this marlin, (just unzipped on your pc desktop), where you can see also "marlin" folder into folder opened
 
 visual studio code ask you to istall:
 
@@ -41,8 +41,13 @@ into /marlin/configuration.h file you can enable (delete // from feature (line) 
 
 after compiling, your firmware is made insto \...\.pio\build\your_motherboard_tipe\firmware_name.bin (or your_firware.elf) file to flash on 3d printer motherboard
 
+guide to compile marlin with marlin autobuild: https://marlinfw.org/docs/basics/auto_build_marlin.html
 
+°°°
 
+°°°
+
+°°°
 
 
 
