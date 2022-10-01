@@ -34,8 +34,11 @@
 #endif
 
 // Avoid conflict with TIMER_SERVO when using the STM32 HAL
-#define TEMP_TIMER  5
 
+#define TEMP_TIMER  5
+#if MOTHERBOARD == BOARD_MKS_ROBIN_NANO_V1_3_F4
+  #undef TEMP_TIMER
+#endif
 //
 // EEPROM
 //
