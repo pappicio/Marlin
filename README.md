@@ -1,3 +1,22 @@
+From Me and Travis90x new sources and releases for TwoTrees Sapphire PRO and PLUS
+
+compiled for robin nano 1.2 and 1.3
+compiled for 
+stock (no bltouch)
+stock with bltouch
+stock with 5x2209 TMC in UART MODE
+with Bltouch and 5x2209 TMC in UART MODE
+
+
+
+
+
+
+
+
+
+
+
 <p align="center"><img src="buildroot/share/pixmaps/logo/marlin-outrun-nf-500.png" height="250" alt="MarlinFirmware's logo" /></p>
 
 <h1 align="center">Marlin 3D Printer Firmware</h1>
