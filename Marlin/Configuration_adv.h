@@ -1050,8 +1050,13 @@
 #if ENABLED(ASSISTED_TRAMMING)
 
   // Define positions for probe points.
-  #define TRAMMING_POINT_XY { {  45, 45 }, { 255,  45 }, { 255, 250 }, { 45, 250 } }
-
+  #if ENABLED (SAPPHIRE_PLUS)
+    #define TRAMMING_POINT_XY { {  45, 45 }, { 255,  45 }, { 255, 250 }, { 45, 250 } }
+    #define ASSISTED_TRAMMING_WAIT_POSITION { 150, 280, 30 } // Move the nozzle out of the way for adjustment
+  #else
+    #define TRAMMING_POINT_XY { {  45, 45 }, { 185,  45 }, { 185, 185 }, { 45, 185 } }
+    #define ASSISTED_TRAMMING_WAIT_POSITION { 150, 205, 30 } // Move the nozzle out of the way for adjustment
+  #endif
   // Define position names for probe points.
   #define TRAMMING_POINT_NAME_1 "Front-Left"
   #define TRAMMING_POINT_NAME_2 "Front-Right"
@@ -1063,7 +1068,7 @@
 
   #define ASSISTED_TRAMMING_WIZARD      // Add a Tramming Wizard to the LCD menu
 
-  #define ASSISTED_TRAMMING_WAIT_POSITION { 150, 280, 30 } // Move the nozzle out of the way for adjustment
+   
 
   /**
    * Screw thread:
