@@ -1,6 +1,6 @@
-From Me and Travis90x new sources and releases for TwoTrees Sapphire PRO and PLUS
+From Me and Travis90x new sources and releases for TwoTrees Sapphire PRO and PLUS 
 
-compiled for robin nano 1.2 and 1.3
+compiled for robin nano 1.2 and 1.3 with Marlin 2.1.1 Release Sources
 compiled for 
 stock (no bltouch)
 stock with bltouch
