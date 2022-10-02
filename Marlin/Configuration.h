@@ -1578,9 +1578,9 @@
  *
  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
  */
-#if DISABLED (LINEAR_ADVANCE)							 
+//#if DISABLED (LINEAR_ADVANCE)							 
 #define S_CURVE_ACCELERATION
-#endif
+//#endif
 //===========================================================================
 //============================= Z Probe Options =============================
 //===========================================================================
