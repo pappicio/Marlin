@@ -157,10 +157,10 @@
 
 // =================== LINEAR ADVANCE ===================
 
-//#define LINEAR_ADVANCE  // Disable Stealthchop for TMC2208 Extruder in GCODE with "M569 S0 E"
-	#if ENABLED (LINEAR_ADVANCE)
+#define LINEAR_ADVANCE  // Disable Stealthchop for TMC2208 Extruder in GCODE with "M569 S0 E"
+#if ENABLED (LINEAR_ADVANCE)
 	#define K_VALUE 0.10
-	#endif
+#endif
 
 
 // =================== FILAMENT RUNOUT ===================
